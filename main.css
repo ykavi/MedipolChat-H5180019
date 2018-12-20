@@ -1,0 +1,15 @@
+body {
+    background: url('arkaplan.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}.login {
+    width: 500px;
+    height: 700px;
+    background-color: rgb(110, 60, 31);
+    opacity: 0.4;
+    border-radius: 30px;
+    margin-top: 100px;
+    margin: 100px auto;
+}

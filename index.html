@@ -25,12 +25,12 @@
                 </div>
                 <div class="wrap">
 
-                    <form class="login">
+                    <form class="login" id="formum">
                         <div class="loginBaslik"><h3>Kullanıcı Girişi</h3></div>
-                        <input type="text" placeholder="Kullanıcı adı" />
-                        <input type="password" placeholder="Şifre" />
-                        <input type="submit" value="Giriş" class="btn btn-success btn-sm" />
-                        <input type="submit" value="Üye ol" class="btn btn-success btn-sm" />
+                        <input type="text" id="kullaniciAdi" placeholder="Kullanıcı adı"  maxlength="10"/>
+                        <input type="password" id="sifre" placeholder="Şifre"  maxlength="10" />
+                        <input type="submit" value="Giriş" class="btn btn-success btn-sm" onclick="girisYap()" />
+                        <input type="submit" value="Üye ol" class="btn btn-success btn-sm" onclick="uyeOl()" />
                         <div class="remember-forgot">
                             <div class="row">       
                                 <button type="button" class="btn btn-outline-success sifremiunuttum">Şifremi Unuttum</button>                               

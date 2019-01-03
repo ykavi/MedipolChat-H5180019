@@ -17,8 +17,11 @@ body {
 .header{
     height:75px;
     background: #000000;
-    opacity: 0.2;
+    opacity: 0.4;
     margin-bottom: 35px;
+    color: #FFF;
+    font-size: 51px;
+    text-align: center;
 }
 .loginBaslik h3{
     color: #FFF;
@@ -203,4 +206,18 @@ form.login a:hover
     background-color: rgba(0, 0, 0, 0.66);
     padding: 10px;
     left: 45%;
+}
+.sosyalMedia{
+
+    height: 50px;
+    margin: 110px auto auto auto;
+    width: 168px;
+}
+.sosyalMedia img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+.sosyalMedia img:hover {
+    cursor: pointer;
 }

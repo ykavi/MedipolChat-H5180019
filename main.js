@@ -9,7 +9,7 @@ $(document).ready(function () {
 });
 function uyeOl() {
 
-  document.getElementById("formum").innerHTML = '<div class="loginBaslik"><h3>Kullanıcı Girişi</h3></div>' +
+  document.getElementById("formum").innerHTML = '<div class="loginBaslik"><h3>Kullanıcı Kaydı</h3></div>' +
     '<input type = "text" id = "kullaniciAdi" placeholder = "Kullanıcı adı"  maxlength="10" />' +
     '<input type="password" id="sifre" placeholder="Şifre"  maxlength="10" />' + '<input type="password" id="sifre2" placeholder="Şifre(tekrar)"  maxlength="10" />' +
     '<input type = "text" id ="E-mail" placeholder = "E-mail" />' +
@@ -52,11 +52,11 @@ function uyeOl() {
 
   if (document.getElementById('kullaniciAdi').value == localStorage.getItem('kullaniciAdi') && document.getElementById('sifre').value == localStorage.getItem('sifre')) {
 
-    document.write('Giriş Başarılı');
-
+    window.location.href = 'sohbet.html';
+    
   } else {
 
-    alert('Kullanıcı Adi veya Şifre Hatalı !')
+    alert('Kullanıcı Adi veya Şifre Hatalı !');
 
   }
 }

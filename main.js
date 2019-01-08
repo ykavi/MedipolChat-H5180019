@@ -13,7 +13,7 @@ function uyeOl() {
     '<input type = "text" id = "kullaniciAdi" placeholder = "Kullanıcı adı"  maxlength="10" />' +
     '<input type="password" id="sifre" placeholder="Şifre"  maxlength="10" />' + '<input type="password" id="sifre2" placeholder="Şifre(tekrar)"  maxlength="10" />' +
     '<input type = "text" id ="E-mail" placeholder = "E-mail" />' +
-    '<input type="submit" value="Kayıt" id="uyeEkle" onclick="kayitEkle()" class="btn btn-success btn-sm" />' +
+    '<input type="button" value="Kayıt" id="uyeEkle" onclick="kayitEkle()" class="btn btn-success btn" style="width:330px" />' +
     '<div class="remember-forgot">' +
     '<div class="row">' +
     '</div>' +

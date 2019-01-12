@@ -1,7 +1,7 @@
 body{
     background: #000000;
 }.sohbet{
-    width: 50%;
+    width: 70%;
     height: 1500px;
     margin: auto;
     background: url('arkaplan.jpg') no-repeat center center fixed;
@@ -14,9 +14,59 @@ body{
     height:75px;
     background: #000000;
     opacity: 0.4;
-    margin-bottom: 35px;
     color: #FFF;
     font-size: 45px;
     text-align: center;
     line-height: 1.5;
+}.odaSecim {
+    opacity: 0.8;
+    background: #000000;
+    font-size: 25px;
+    color: #FFF;
+    width: 50px;
+    text-align: center;
+    border-radius: 0 0 0 0;
+    border-bottom: rgb(129, 129, 129) 1px solid;
+    cursor: pointer;
+}.odaSecim:hover {
+    opacity: 0.6;
+    background: #FFF;
+    color: #000000;
+}.sohbetPaneli {
+    height:845px;
+    width: 70%;
+    float: left;
+    background: #000000;
+    opacity: 0.8;
+    color: #FFF;
+    font-size: 25px;
+    position: relative;
+    border-radius: 0 0 20px 0;
+}.onlineKullanici {
+    width: 20%;
+    height: 845px;
+    background: #000000;
+    opacity: 0.8;
+    float: right;
+    color: #FFF;
+    text-align: center;
+}.onlineKullanici ul {
+    list-style: none;
+    float: left;
+    font-style: italic;
+    font-size: 24px;
+    cursor: pointer;
+}.onlineKullanici ul li {
+    margin-bottom: 13px;
+}.onlineKullanici ul li:hover {
+    opacity: 1;
+    background: #FFF;
+    color: #000000;
+}.mesajYazim {
+    width: 100%;
+    height: 250px;
+    background:  rgb(110, 60, 31);
+    position:absolute; 
+    bottom:0px;
+    border-radius: 20px;
 }

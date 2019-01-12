@@ -71,3 +71,6 @@ function uyeOl() {
   document.getElementById('baslik').innerHTML = localStorage.getItem('secilenOda');
   
 }
+function odaGecis(isim){
+  document.getElementById('baslik').innerHTML = isim.id;
+}

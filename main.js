@@ -32,6 +32,7 @@ function uyeOl() {
   if (document.getElementById('sifre').value == document.getElementById('sifre2').value) {
 
     alert('Kaydınız Basarıyla tamamlanmıştır,Giriş yapabilirsiniz');
+    window.location.href = 'index.html';
 
   } else {
 
@@ -51,12 +52,22 @@ function uyeOl() {
 } function girisYap() {
 
   if (document.getElementById('kullaniciAdi').value == localStorage.getItem('kullaniciAdi') && document.getElementById('sifre').value == localStorage.getItem('sifre')) {
-
-    window.location.href = 'sohbet.html';
+    
+    window.location.href = 'odaSecim.html';
     
   } else {
 
     alert('Kullanıcı Adi veya Şifre Hatalı !');
-
+    window.location.href = 'index.html';
   }
+}function secilenOda(odaAdi){
+
+  document.getElementById('baslik').innerHTML = odaAdi.innerHTML;
+  localStorage.setItem('secilenOda',odaAdi.innerHTML);
+  window.location.href = 'sohbet.html';  
+
+}function degisiklikleriEkle(){
+
+  document.getElementById('baslik').innerHTML = localStorage.getItem('secilenOda');
+  
 }

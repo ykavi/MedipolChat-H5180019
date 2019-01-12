@@ -1,0 +1,22 @@
+body{
+    background: #000000;
+}.sohbet{
+    width: 50%;
+    height: 1500px;
+    margin: auto;
+    background: url('arkaplan.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 15px;  
+}.header{
+    height:75px;
+    background: #000000;
+    opacity: 0.4;
+    margin-bottom: 35px;
+    color: #FFF;
+    font-size: 45px;
+    text-align: center;
+    line-height: 1.5;
+}

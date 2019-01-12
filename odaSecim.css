@@ -1,0 +1,56 @@
+body{
+    background:black;
+}.sohbet{
+    width: 50%;
+    height: 1500px;
+    margin: auto;
+    background: url('arkaplan.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 15px;
+    display: none;
+}.header{
+    height:75px;
+    background: #000000;
+    opacity: 0.5;
+    margin-bottom: 35px;
+    color: #FFF;
+    font-size: 45px;
+    text-align: center;
+    line-height: 1.6;
+    cursor: pointer;
+    display: none;
+}
+.header:hover {
+    opacity: 1;
+}
+.odaSecimBilgiKutusu{
+    width: 30%;
+    height: 500px;
+    margin: auto;
+    background: rgb(0, 0, 0);
+    opacity: 2;
+    border-radius: 15px;
+    color: #FFF;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 20px;
+}.devam{
+    width: 100%;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 550;
+    margin-top: 16px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    height: 55px;
+    border:none;
+}.devam:hover {
+    opacity: 0.8;
+}

@@ -43,6 +43,7 @@ body{
     position: relative;
     border-radius: 0 0 20px 0;
 }.onlineKullanici {
+    border-radius: 15px;
     width: 20%;
     height: 845px;
     background: #000000;

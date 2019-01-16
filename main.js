@@ -158,3 +158,6 @@ function aktiflerC() {
 function aktiflerPolin() {
   document.getElementById('aktifKullanicilar').innerHTML = '<li>Hüdanur</li>' + '<li>Şener Kaya</li>' + '<li>Kaya</li>' + '<li>Osman</li>' + '<li>Pınar</li>' + '<li>Gökhan</li>' + '<li>Hami</li>';
 }
+function mesajGonder(){
+  document.getElementById('sohbetler').innerHTML += '<li>'+document.getElementById('mesaj').value+'</li>';
+}

@@ -7,7 +7,16 @@
     <title>MedipolChat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="sohbet.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".odaSecim").click(function () {
+                $("#aktifKullanicilar").hide(150);
+                $("#aktifKullanicilar").show(800);
+            });
+        });
+    </script>
 </head>
 
 <body onload="degisiklikleriEkle()">
@@ -22,9 +31,11 @@
                 <div class="odaSecim" id="C Blok" onclick="odaGecis(this),aktiflerC()"><b>C</b><br><b>B</b><br><b>L</b><br><b>O</b><br><b>K</b></div>
                 <div class="odaSecim" id="Polin" onclick="odaGecis(this),aktiflerPolin()"><b>P</b><br><b>O</b><br><b>L</b><br><b>İ</b><br><b>N</b></div>
             </div>
-            <div class="sohbetPaneli">
-                    <div class="header" id="baslik" style="opacity:0.8"><b></b></div>
-                <div class="mesajYazim"></div>
+            <div class="sohbetPaneli" id="sohbetler">
+                <div class="header" id="baslik" style="opacity:0.8"><b></b></div>
+                <div class="mesajYazim">
+                   <textarea id="mesaj"></textarea><input type="button" class="gonderMesaj" id="mesajGonder" value="Gönder" onclick="mesajGonder()">
+                </div>
             </div>
             <div class="onlineKullanici">
                 <h2>Aktif</h2>

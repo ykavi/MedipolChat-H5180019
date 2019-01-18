@@ -159,5 +159,21 @@ function aktiflerPolin() {
   document.getElementById('aktifKullanicilar').innerHTML = '<li>Hüdanur</li>' + '<li>Şener Kaya</li>' + '<li>Kaya</li>' + '<li>Osman</li>' + '<li>Pınar</li>' + '<li>Gökhan</li>' + '<li>Hami</li>';
 }
 function mesajGonder(){
-  document.getElementById('sohbetler').innerHTML += '<li>'+document.getElementById('mesaj').value+'</li>';
+  var kufur;
+  if(document.getElementById('mesaj').value != "" && document.getElementById('mesaj').value != " "){
+
+    kufurList.forEach(element => {
+
+      if(element == document.getElementById('mesaj').value){
+        kufur = 'var';
+      }
+    });
+    
+    if(kufur != 'var'){
+      document.getElementById('sohbetler').innerHTML += '<li>'+document.getElementById('mesaj').value+'<b><i style="color:green"> : '+localStorage.getItem('kullaniciAdi')+'</i></b>'+'</li>';
+    }else{
+      document.getElementById('sohbetler').innerHTML += '<li>********<b><i style="color:green"> : '+localStorage.getItem('kullaniciAdi')+'</i></b>'+'</li>';
+    }
+  }
 }
+  

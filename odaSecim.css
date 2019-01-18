@@ -1,8 +1,8 @@
 body{
     background:black;
 }.sohbet{
-    width: 50%;
-    height: 1500px;
+    width: 80%;
+    height: 90%;
     margin: auto;
     background: url('arkaplan.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;

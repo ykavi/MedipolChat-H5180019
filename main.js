@@ -175,5 +175,14 @@ function mesajGonder(){
       document.getElementById('sohbetler').innerHTML += '<li>********<b><i style="color:green"> : '+localStorage.getItem('kullaniciAdi')+'</i></b>'+'</li>';
     }
   }
+}function anaSayfaGec(){
+  window.location.href = 'index.html';
+}
+function enterSend(event){
+  var keyKod = event.which || event.keyCode;
+  if(keyKod == 13){
+    document.getElementById('mesajGonder').click();
+    document.body.cursor = '#mesaj';
+  }
 }
   

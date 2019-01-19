@@ -23,7 +23,7 @@
 <body onload="degisiklikleriEkle()">
     <div class="container">
         <div class="sohbet">
-            <div class="header" style="opacity:0.8"><i><b>MedipolChat</b></i></div>
+            <div class="header" style="opacity:0.8"><i><b onclick="anaSayfaGec()" style="cursor:pointer">MedipolChat</b></i></div>
             <div style="float:left">
                 <div class="odaSecim" id="Kuzey" onclick="odaGecis(this),aktiflerKuzey()"><b>K</b><br><b>U</b><br><b>Z</b><br><b>E</b><br><b>Y</b></div>
                 <div class="odaSecim" id="Güney" onclick="odaGecis(this),aktiflerGuney()"><b>G</b><br><b>Ü</b><br><b>N</b><br><b>E</b><br><b>Y</b></div>
@@ -35,7 +35,7 @@
             <div class="sohbetPaneli" id="sohbetler">
                 <div class="header" id="baslik" style="opacity:0.8"><b></b></div>
                 <div class="mesajYazim">
-                   <textarea id="mesaj"></textarea><input type="button" class="gonderMesaj" id="mesajGonder" value="Gönder" onclick="mesajGonder()">
+                   <textarea id="mesaj" onkeypress="enterSend(event)"></textarea><input type="button" class="gonderMesaj" id="mesajGonder" value="Gönder" onclick="mesajGonder()">
                 </div>
             </div>
             <div class="onlineKullanici">

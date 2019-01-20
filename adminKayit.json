@@ -1,0 +1,14 @@
+var adminler = [
+    {
+        "kullaniciAdi":"admKavi",
+        "sifre":"kavi.12"
+    },
+    {
+        "kullaniciAdi":"admBayram",
+        "sifre":"bayram.12"   
+    },
+    {
+        "kullaniciAdi":"admSamet",
+        "sifre":"samet.12"   
+    }
+]

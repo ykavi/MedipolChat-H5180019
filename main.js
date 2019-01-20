@@ -19,7 +19,7 @@ function uyeOl() {
     '<div class="remember-forgot">' +
     '<div class="row">' +
     '</div>' +
-    '<div class="sosyalMedia"><img src="facebook.png"><img src="twitter.png"><img src="instagram.png"></div>' +
+    '<div class="sosyalMedia"><a href="https://www.facebook.com/yunusemre.kavi"><img src="facebook.png"></a><a href="https://twitter.com/YunusEmreKavi"><img src="twitter.png"></a><a href="https://www.instagram.com/kavii_x/?hl=tr"><img src="instagram.png"></a></div>' +
     '</div>' +
     '</div>';
 
@@ -59,12 +59,41 @@ function uyeOl() {
         '<div class="remember-forgot">' +
         '<div class="row">' +
         '</div>' +
-        '<div class="sosyalMedia"><img src="facebook.png"><img src="twitter.png"><img src="instagram.png"></div>' +
+        '<div class="sosyalMedia"><a href="https://www.facebook.com/yunusemre.kavi"><img src="facebook.png"></a><a href="https://twitter.com/YunusEmreKavi"><img src="twitter.png"></a><a href="https://www.instagram.com/kavii_x/?hl=tr"><img src="instagram.png"></a></div>' +
         '</div>' +
         '</div>';
     }
   }
 } function girisYap() {
+
+  for (let index = 0; index < adminler.length; index++) {
+
+    if (document.getElementById('kullaniciAdi').value == adminler[index].kullaniciAdi && document.getElementById('sifre').value == adminler[index].sifre) {
+
+      localStorage.setItem('aktifAdmin', adminler[index].kullaniciAdi);
+      document.body.innerHTML =
+
+        '<div class="sohbetAdm">' +
+        '<div class="headerAdm" style="opacity:0.8"><i><b onclick="anaSayfaGec()" style="cursor:pointer">MedipolChat</b></i></div>' +
+        '<div class="sohbetPaneliAdm">' +
+        '<div class="adminHosgeldinAdm" id="adminHoslama">' +
+        '</div>' +
+        '<div class="admIcerik"> Haftalık Ziyaretci Sayımız <br><br> <b>215</b> </div>' +
+        '<div class="admIcerik2">Şuan Aktif Olan Kullanıcı Sayımız <br><br> <b>20</b></div>' +
+        '<div class="admAlt">' +
+        '<div class="altAdm" id="repOnay"></div>' +
+        ' </div>' +
+        '</div>' +
+        '</div>' 
+
+
+        document.getElementById('adminHoslama').innerHTML = 'Yöneticilerimizden <br> <b>' + localStorage.getItem('aktifAdmin') + '</b> hoşgeldiniz';
+        document.getElementById('repOnay').innerHTML = '<b>'+localStorage.getItem('kullaniciAdi')+'</b>'+' Kullanıcı Adlı kişinin '+'<b>'+localStorage.getItem('repYazi')+'</b>'+' Mesajı Şikayet edilmiştir,Onayınız Bekleniyor <br><button class="devam" onclick="repOnaylandi()">Onayla</button>';
+
+    }
+
+  }
+
 
   if (document.getElementById('kullaniciAdi').value == localStorage.getItem('kullaniciAdi') && document.getElementById('sifre').value == localStorage.getItem('sifre')) {
 
@@ -98,7 +127,7 @@ function sifremiUnuttum() {
     '<div class="remember-forgot">' +
     '<div class="row">' +
     '</div>' +
-    '<div class="sosyalMedia"><img src="facebook.png"><img src="twitter.png"><img src="instagram.png"></div>' +
+    '<div class="sosyalMedia"><a href="https://www.facebook.com/yunusemre.kavi"><img src="facebook.png"></a><a href="https://twitter.com/YunusEmreKavi"><img src="twitter.png"></a><a href="https://www.instagram.com/kavii_x/?hl=tr"><img src="instagram.png"></a></div>' +
     '</div>' +
     '</div>';
 }
@@ -112,7 +141,7 @@ function sifreYenile() {
       '<div class="remember-forgot">' +
       '<div class="row">' +
       '</div>' +
-      '<div class="sosyalMedia"><img src="facebook.png"><img src="twitter.png"><img src="instagram.png"></div>' +
+      '<div class="sosyalMedia"><a href="https://www.facebook.com/yunusemre.kavi"><img src="facebook.png"></a><a href="https://twitter.com/YunusEmreKavi"><img src="twitter.png"></a><a href="https://www.instagram.com/kavii_x/?hl=tr"><img src="instagram.png"></a></div>' +
       '</div>' +
       '</div>';
   } else if (document.getElementById('gizliYanit').value == localStorage.getItem('guvenlikSorusu')) {
@@ -123,7 +152,7 @@ function sifreYenile() {
       '<div class="remember-forgot">' +
       '<div class="row">' +
       '</div>' +
-      '<div class="sosyalMedia"><img src="facebook.png"><img src="twitter.png"><img src="instagram.png"></div>' +
+      '<div class="sosyalMedia"><a href="https://www.facebook.com/yunusemre.kavi"><img src="facebook.png"></a><a href="https://twitter.com/YunusEmreKavi"><img src="twitter.png"></a><a href="https://www.instagram.com/kavii_x/?hl=tr"><img src="instagram.png"></a></div>' +
       '</div>' +
       '</div>';
   } else {
@@ -135,7 +164,7 @@ function sifreYenile() {
       '<div class="remember-forgot">' +
       '<div class="row">' +
       '</div>' +
-      '<div class="sosyalMedia"><img src="facebook.png"><img src="twitter.png"><img src="instagram.png"></div>' +
+      '<div class="sosyalMedia"><a href="https://www.facebook.com/yunusemre.kavi"><img src="facebook.png"></a><a href="https://twitter.com/YunusEmreKavi"><img src="twitter.png"></a><a href="https://www.instagram.com/kavii_x/?hl=tr"><img src="instagram.png"></a></div>' +
       '</div>' +
       '</div>';
   }
@@ -158,31 +187,45 @@ function aktiflerC() {
 function aktiflerPolin() {
   document.getElementById('aktifKullanicilar').innerHTML = '<li>Hüdanur</li>' + '<li>Şener Kaya</li>' + '<li>Kaya</li>' + '<li>Osman</li>' + '<li>Pınar</li>' + '<li>Gökhan</li>' + '<li>Hami</li>';
 }
-function mesajGonder(){
+function mesajGonder() {
   var kufur;
-  if(document.getElementById('mesaj').value != "" && document.getElementById('mesaj').value != " "){
+  if (document.getElementById('mesaj').value != "" && document.getElementById('mesaj').value != " " && document.getElementById('mesaj').value != "  ") {
 
     kufurList.forEach(element => {
 
-      if(element == document.getElementById('mesaj').value){
+      if (element == document.getElementById('mesaj').value) {
         kufur = 'var';
       }
     });
-    
-    if(kufur != 'var'){
-      document.getElementById('sohbetler').innerHTML += '<li>'+document.getElementById('mesaj').value+'<b><i style="color:green"> : '+localStorage.getItem('kullaniciAdi')+'</i></b>'+'</li>';
-    }else{
-      document.getElementById('sohbetler').innerHTML += '<li>********<b><i style="color:green"> : '+localStorage.getItem('kullaniciAdi')+'</i></b>'+'</li>';
+    if (kufur != 'var') {
+      document.getElementById('sohbetler').innerHTML += '<li><span id="report" onclick="report(this)">' + document.getElementById('mesaj').value + '</span><b><i style="color:green"> : ' + localStorage.getItem('kullaniciAdi') + '</i></b>' + '</li>';
+    } else {
+      document.getElementById('sohbetler').innerHTML += '<li>********<b><i style="color:green"> : ' + localStorage.getItem('kullaniciAdi') + '</i></b>' + '</li>';
     }
   }
-}function anaSayfaGec(){
+} function anaSayfaGec() {
   window.location.href = 'index.html';
 }
-function enterSend(event){
+function enterSend(event) {
   var keyKod = event.which || event.keyCode;
-  if(keyKod == 13){
+  if (keyKod == 13) {
     document.getElementById('mesajGonder').click();
-    document.body.cursor = '#mesaj';
   }
 }
-  
+function report(yazi) {
+  localStorage.setItem('repYazi',yazi.innerHTML);
+  localStorage.setItem('repKullanici',localStorage.getItem('KullaniciAdi'));
+  document.getElementById('sohbetler').innerHTML = '<div id="reportIcerik" class="reportEkran"></div>';
+  document.getElementById('reportIcerik').innerHTML = '<b style="color:green">' + localStorage.getItem('kullaniciAdi') + '</b>  ' + 'Kullanıcı adlı kişisinin  <u><b>' + yazi.innerHTML + '</b></u>' + '  mesajını Şikayet etmek istiyor musunuz ?<br><br><input type="button" onclick="sikayetOnay()" value="Evet" class="devam" /><input type="button" onclick="sikayetGeri()" value="Hayır" class="devam" />';
+}
+function sikayetOnay() {
+  alert('Şikayetiniz için Teşekkürler,gerekli işlemler yapılacaktır.');
+  window.location.href = 'sohbet.html';
+}
+function repOnaylandi(){
+  document.getElementById('repOnay').innerHTML = '<b>'+localStorage.getItem('kullaniciAdi')+'</b> Adlı Kullanıcının Üyeliği Başarıyla Silinmiştir.';
+  localStorage.removeItem('kullaniciAdi');
+}
+function sikayetGeri(){
+  window.location.href = 'sohbet.html';
+}

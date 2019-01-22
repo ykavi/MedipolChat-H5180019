@@ -1,4 +1,5 @@
-# MedipolChat https://kavi99.github.io/MedipolChat-H5180019/
+# MedipolChat 
+<b>https://kavi99.github.io/MedipolChat-H5180019/</b>
 Siteye dinamık olarak kullanıcı kaydı yapılır nelerle uye olduysa onlarla gırıs yapabılır
 Adminlerin uyelıklerı farklıdır veri tabınında eklı olan admınler o kullanıcı adlarıyla gırerse otomatık olarak admin paneline yonlendirilir
 Enter tusuyla msj yollanır , yollanan msj karalisteJsonun daki kufurler ile eslesirse ****** seklınde cıktısı olur yanı kufur fıltresi KISMEN calısır durumdadır 

@@ -7,3 +7,4 @@ Kullanıcının msjna tıklandıgında REPORT etme durumu sorulur eger report ed
 Şifremi unuttumdaki soru dogru cevaplanırsa Kullanıcı adı ve şifre gosterılır
 Oda secim ekranında hangı odaya tıklanırsa o odanın ısmı sohbet panelinde yazar dinamıktır
 Sohbet ekranında da oda degısımı mevcuttur hangıne tıklanırsa onun ismi yazar ve o odadakı kullanıcıalrın da ismi degısır bunlar da dınamıktır
+# ilk web ödevi # 
